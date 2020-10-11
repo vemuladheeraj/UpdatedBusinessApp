@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true">
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+        <RelativeLayout
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome Dheeraj"
+                android:textStyle="bold"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="8dp"
+                android:textSize="20dp"/>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please select your search content"
+            android:textStyle="bold"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="20dp"/>
+
+        <!-- add RadioGroup which contain the many RadioButton-->
+        <RadioGroup
+            android:layout_marginTop="150dp"
+            android:id="@+id/groupradio"
+            android:layout_marginLeft="10dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <!-- In RadioGroup create the 1 Radio Button-->
+            <!-- like this we will add some more Radio Button-->
+            <RadioButton
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/radia_id1"
+                android:text="Retailer Name"
+                android:textSize="20dp"/>
+
+            <RadioButton
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/radia_id2"
+                android:text="Retailer Location"
+                android:textSize="20dp"/>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp">
+                <EditText android:id="@+id/searchcontent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:hint="Search content"/>
+            </android.support.design.widget.TextInputLayout>
+        </RadioGroup>
+
+        <!-- add button For Submit the Selected item-->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="search"
+            android:id="@+id/search"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_marginTop="300dp"
+            android:layout_marginLeft="180dp"
+            />
+
+        <!-- add clear button for clear the selected item-->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clear"
+            android:id="@+id/clear"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginTop="300dp"
+            android:layout_marginLeft="20dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Looking for Add or Edit?"
+            android:textStyle="bold"
+            android:layout_marginTop="400dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="20dp"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add"
+            android:id="@+id/add"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_marginTop="450dp"
+            android:layout_marginLeft="180dp"
+            />
+
+        <!-- add clear button for clear the selected item-->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit"
+            android:id="@+id/edit"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginTop="450dp"
+            android:layout_marginLeft="20dp"
+            />
+    </RelativeLayout>
+
+</ScrollView>
