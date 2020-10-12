@@ -47,14 +47,14 @@
             <RadioButton
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/radia_id1"
+                android:id="@+id/retailername"
                 android:text="Retailer Name"
                 android:textSize="20dp"/>
 
             <RadioButton
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/radia_id2"
+                android:id="@+id/retailerlocation"
                 android:text="Retailer Location"
                 android:textSize="20dp"/>
 

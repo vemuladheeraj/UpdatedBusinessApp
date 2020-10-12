@@ -23,21 +23,23 @@ public class LoginActivity extends AppCompatActivity {
     @BindView(R.id.input_password) EditText _passwordText;
     @BindView(R.id.btn_login) Button _loginButton;
     @BindView(R.id.link_signup) TextView _signupLink;
-    
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
-        
+        //onClick(getCurrentFocus());
         _loginButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
                 login();
+
+                //onActivityResult(REQUEST_SIGNUP,RESULT_OK,null);
             }
         });
-
+        // onClick(v);
         _signupLink.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -50,6 +52,21 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
+
+   /* public void onClick(View v)
+    {
+        if (v.getId()==R.id.btn_login){
+            login();
+        }
+        else if(v.getId()==R.id.btn_signup)
+        {
+            Intent intent = new Intent(getApplicationContext(), SignupActivity.class);
+            startActivityForResult(intent, REQUEST_SIGNUP);
+            finish();
+            overridePendingTransition(R.anim.push_left_in, R.anim.push_left_out);
+        }
+    }*/
+
 
     public void login() {
         Log.d(TAG, "Login");
@@ -76,11 +93,12 @@ public class LoginActivity extends AppCompatActivity {
                 new Runnable() {
                     public void run() {
                         // On complete call either onLoginSuccess or onLoginFailed
-                        onLoginSuccess();
+
                         // onLoginFailed();
                         progressDialog.dismiss();
                     }
                 }, 3000);
+        onLoginSuccess();
     }
 
 
@@ -90,8 +108,9 @@ public class LoginActivity extends AppCompatActivity {
             if (resultCode == RESULT_OK) {
 
                 // TODO: Implement successful signup logic here
+
                 // By default we just finish the Activity and log them in automatically
-                this.finish();
+                //this.finish();
             }
         }
     }
@@ -104,7 +123,8 @@ public class LoginActivity extends AppCompatActivity {
 
     public void onLoginSuccess() {
         _loginButton.setEnabled(true);
-        finish();
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivityForResult(intent, 0);
     }
 
     public void onLoginFailed() {
