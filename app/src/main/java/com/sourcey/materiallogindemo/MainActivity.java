@@ -28,10 +28,10 @@ public class MainActivity extends AppCompatActivity {
     RadioButton _retailerName;
     @BindView(R.id.retailerlocation)
     RadioButton _retailerLocation;
-    @BindView(R.id.searchcontent)
-    TextInputEditText _searchArea;
+    /* @BindView(R.id.searchcontent)
+     TextInputEditText _searchArea;*/
     @BindView(R.id.search)
-    TextInputEditText _searchButton;
+    Button _searchButton;
 
 
     @Override
@@ -48,18 +48,18 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
 
-            _searchButton.setOnClickListener(new View.OnClickListener() {
+           /* _searchButton.setOnClickListener(new View.OnClickListener() {
                 List<String> searchValues = CheckData();
 
                 @Override
                 public void onClick(View view) {
-                    Intent intent = new Intent(MainActivity.this, AddDetailsActivity.class);
+                    Intent intent = new Intent(MainActivity.this, IntentHandler.class);
                     intent.putExtra("Search context", (Parcelable) searchValues);
                     startActivity(intent);
                     //String sessionId = getIntent().getStringExtra("EXTRA_SESSION_ID");
 
                 }
-            });
+            });*/
 
         } catch (Exception e) {
             return;
@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public List<String> CheckData() {
+   /* public List<String> CheckData() {
         List<String> data = new ArrayList<String>();
         String SearchData = _searchArea.getEditableText().toString();
         data.add(SearchData);
@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
             data.add("Retailer Location");
         }
         return data;
-    }
+    }*/
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
