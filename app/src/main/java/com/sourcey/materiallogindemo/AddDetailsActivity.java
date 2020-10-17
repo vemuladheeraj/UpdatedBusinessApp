@@ -36,7 +36,7 @@ public class AddDetailsActivity extends AppCompatActivity implements AdapterView
     String[] Beverages = new String[]{"Cool Drinks", "Water"};
     String[] Dairy = new String[]{"Chocolates", "Milk"};
 
-    String[] competitorNames = new String[]{"Udaan            ",
+    String[] competitorNames = new String[]{"Competitor Nam", "Udaan            ",
             "Big Basket       ",
             "Eboot            ",
             "FMCG Distributors",
@@ -49,7 +49,7 @@ public class AddDetailsActivity extends AppCompatActivity implements AdapterView
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adddetails);
         ButterKnife.bind(this);
-        String[] items = new String[]{"Attapur",
+        String[] items = new String[]{"Franchise Area", "Attapur",
                 "Chanda Nagar               ",
                 "Chandrayan gutta           ",
                 "Chintal                    ",
@@ -90,7 +90,7 @@ public class AddDetailsActivity extends AppCompatActivity implements AdapterView
 
         Spinner spinner3 = (Spinner) findViewById(R.id.competitorname);
         ArrayAdapter<String> adapter3 = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, competitorNames);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner3.setAdapter(adapter3);
 
     }
