@@ -36,6 +36,14 @@ public class AddDetailsActivity extends AppCompatActivity implements AdapterView
     String[] Beverages = new String[]{"Cool Drinks", "Water"};
     String[] Dairy = new String[]{"Chocolates", "Milk"};
 
+    String[] competitorNames = new String[]{"Udaan            ",
+            "Big Basket       ",
+            "Eboot            ",
+            "FMCG Distributors",
+            "Wholesale        ",
+            "NinjaCart        ",
+            "Jio              "};
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -79,6 +87,11 @@ public class AddDetailsActivity extends AppCompatActivity implements AdapterView
         adapterForSpinner1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner1.setAdapter(adapterForSpinner1);
         spinner1.setOnItemSelectedListener(this);
+
+        Spinner spinner3 = (Spinner) findViewById(R.id.competitorname);
+        ArrayAdapter<String> adapter3 = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, competitorNames);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner3.setAdapter(adapter3);
 
     }
 
