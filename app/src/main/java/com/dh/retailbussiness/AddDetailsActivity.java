@@ -1,4 +1,4 @@
-package com.sourcey.materiallogindemo;
+package com.dh.retailbussiness;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -13,36 +13,35 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 
-public class AddDetailsActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
-    public Spinner spinner1, spinner2;
+public class AddDetailsActivity extends AppCompatActivity {
+    public Spinner spinner1, spinner2,spinner3,spinner4,spinner5,spinner6,spinner7,spinner8,spinner9,spinner10;
     public ArrayAdapter<String> adapterForSpinner1, adapterForSpinner2;
+
+
+    @BindView(R.id.operatedSince)
+    AppCompatSpinner _operatedSince;
     @BindView(R.id.franchaise_area)
     AppCompatSpinner _franchaiseArea;
-    @BindView(R.id.product_category)
-    AppCompatSpinner _productCategory;
-    @BindView(R.id.product_sub_category)
-    AppCompatSpinner _productSubCategory;
-    @BindView(R.id.competitorname)
-    AppCompatSpinner _competitorName;
-    String[] items1 = new String[]{"Product List",
-            "Beverages List",
-            "Cleaning List",
-            "Dairy List",
-            "Eggs List",
-            "Food List",
-            "FandV List",
-            "PersonalCare List",
-            "Snacks List"};
-    String[] Beverages = new String[]{"Cool Drinks", "Water"};
-    String[] Dairy = new String[]{"Chocolates", "Milk"};
 
-    String[] competitorNames = new String[]{"Competitor Nam", "Udaan            ",
-            "Big Basket       ",
-            "Eboot            ",
-            "FMCG Distributors",
-            "Wholesale        ",
-            "NinjaCart        ",
-            "Jio              "};
+    @BindView(R.id.retailer_category)
+    AppCompatSpinner _retailerCategory;
+
+    @BindView(R.id.essential)
+    AppCompatSpinner _essential;
+    @BindView(R.id.fpv)
+    AppCompatSpinner _fpv;
+    @BindView(R.id.branded)
+    AppCompatSpinner _branded;
+    @BindView(R.id.monthlyTurnOver)
+    AppCompatSpinner _monthlyTurnOver;
+    @BindView(R.id.currentSupplies)
+    AppCompatSpinner _currentSupplies;
+    @BindView(R.id.onboardingSSK)
+    AppCompatSpinner _onboardingSSK;
+    @BindView(R.id.kyc)
+    AppCompatSpinner _kyc;
+
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -81,21 +80,24 @@ public class AddDetailsActivity extends AppCompatActivity implements AdapterView
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
 
-        spinner1 = (Spinner) findViewById(R.id.product_category);
-        spinner2 = (Spinner) findViewById(R.id.product_sub_category);
-        ArrayAdapter<String> adapterForSpinner1 = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, items1);
+        spinner1 = (Spinner) findViewById(R.id.operatedSince);
+        spinner2 = (Spinner) findViewById(R.id.retailer_category);
+        spinner3 = (Spinner) findViewById(R.id.essential);
+
+
+        ArrayAdapter<String> adapterForSpinner1 = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, items);
         adapterForSpinner1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner1.setAdapter(adapterForSpinner1);
-        spinner1.setOnItemSelectedListener(this);
 
-        Spinner spinner3 = (Spinner) findViewById(R.id.competitorname);
-        ArrayAdapter<String> adapter3 = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, competitorNames);
+
+
+        ArrayAdapter<String> adapter3 = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, items);
         adapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner3.setAdapter(adapter3);
 
     }
 
-    @Override
+   /* @Override
     public void onItemSelected(AdapterView<?> parent, View view, int i, long l) {
         Toast.makeText(this, "Result " + spinner1.getSelectedItem().toString(), Toast.LENGTH_SHORT).show();
         if (parent.getId() == R.id.product_category) {
@@ -114,10 +116,7 @@ public class AddDetailsActivity extends AppCompatActivity implements AdapterView
                 spinner2.setOnItemSelectedListener(this);
             }
         }
-    }
+    }*/
 
-    @Override
-    public void onNothingSelected(AdapterView<?> adapterView) {
 
-    }
 }

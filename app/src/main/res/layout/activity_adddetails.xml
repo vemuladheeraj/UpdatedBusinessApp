@@ -29,10 +29,40 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
-                android:hint="Retailer Name" />
+                android:hint="Retailer Shop Name" />
         </android.support.design.widget.TextInputLayout>
 
-        <!-- Address Label -->
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/operatedSince"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"/>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+            <EditText android:id="@+id/contactPerson"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:hint="Contact Person" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+            <EditText android:id="@+id/contactNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="Contact Number" />
+        </android.support.design.widget.TextInputLayout>
+
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -45,18 +75,6 @@
                 android:hint="Retailer Area" />
         </android.support.design.widget.TextInputLayout>
 
-
-
-        <!--  Email Label -->
-
-        <android.support.v7.widget.AppCompatSpinner
-            android:id="@+id/franchaise_area"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"/>
-
-        <!-- mobile number -->
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -70,14 +88,69 @@
         </android.support.design.widget.TextInputLayout>
 
         <android.support.v7.widget.AppCompatSpinner
-            android:id="@+id/product_category"
+            android:id="@+id/franchaise_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"/>
+        <!--product_category-->
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/retailer_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"/>
+        <!--product_sub_category-->
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/essential"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"/>
 
         <android.support.v7.widget.AppCompatSpinner
-            android:id="@+id/product_sub_category"
+            android:id="@+id/fpv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"/>
+
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/branded"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"/>
+
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/monthlyTurnOver"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"/>
+
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/currentSupplies"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"/>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+            <EditText android:id="@+id/compitetormontlypurchase"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="Compitetor Montly purchase" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/onboardingSSK"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -88,12 +161,20 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp">
-            <EditText android:id="@+id/quantity"
+            <EditText android:id="@+id/comments"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="number"
-                android:hint="Quantity (KG)" />
+                android:hint="Comments" />
         </android.support.design.widget.TextInputLayout>
+
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/kyc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"/>
+
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -102,11 +183,11 @@
             <EditText android:id="@+id/value"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="number"
-                android:hint="Amount (Rupees)" />
+                android:inputType="text"
+                android:hint="Registration Number" />
         </android.support.design.widget.TextInputLayout>
 
-        <android.support.v7.widget.AppCompatSpinner
+        <!--<android.support.v7.widget.AppCompatSpinner
             android:id="@+id/competitorname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -122,7 +203,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="number"
                 android:hint="Compitetor Purchase" />
-        </android.support.design.widget.TextInputLayout>
+        </android.support.design.widget.TextInputLayout>-->
         <android.support.v7.widget.AppCompatButton
             android:id="@+id/submit_value"
             android:layout_width="fill_parent"
